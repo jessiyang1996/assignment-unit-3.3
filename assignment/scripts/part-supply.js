@@ -32,7 +32,9 @@ supplyChanges.push(25);
 console.log('Add 25: ', supplyChanges);
 
 // 6. Create three new variables named 'positives', 'negatives', and
-//    'zeroes' whose values are empty arrays. Then, write a for loop
+//    'zeroes' whose values are empty arrays. check
+
+//Then, write a for loop > check
 //    that loops through the 'supplyChanges' array. For each iteration of
 //    the loop:
 //      - If the value is a positive number, push it into the 'positives' array.
@@ -44,8 +46,18 @@ let positives=[];
 let negatives=[];
 let zeroes=[];
 
-
-
+for(i=0; i<supplyChanges.length; i++){
+  if(supplyChanges[i]>0){
+    positives.push(supplyChanges[i])
+  } else if(supplyChanges[i]<0){
+    negatives.push(supplyChanges[i])
+  } else{
+    zeroes.push(supplyChanges[i])
+  }
+}
+console.log(positives);
+console.log(negatives);
+console.log(zeroes);
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
 //    'negatives', and 'zeroes', create three new arrays named 'stretchPositives',
